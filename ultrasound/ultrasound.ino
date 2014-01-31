@@ -62,7 +62,7 @@ void loop()
   Serial.print("cm");
   Serial.println();
   
-  delay(100);
+  delay(200);
 }
 
 long microsecondsToInches(long microseconds)
