@@ -53,16 +53,14 @@ void loop()
   duration = pulseIn(pingPin, HIGH);
 
   // convert the time into a distance
-  inches = microsecondsToInches(duration);
   cm = microsecondsToCentimeters(duration);
   
-  Serial.print(inches);
-  Serial.print("in, ");
   Serial.print(cm);
   Serial.print("cm");
   Serial.println();
   
-  delay(200);
+  tone(8, (uint16_t) 440 - cm, 200);
+  delay(800);
 }
 
 long microsecondsToInches(long microseconds)
