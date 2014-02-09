@@ -8,8 +8,10 @@
  * 10K resistor attached to pin 2 from ground
  
  */
-
+#if defined(__AVR_ATmega32U4__)
 #define USE_SERIAL
+#endif 
+
 #include "ampel.h"
 
 #define BUTTON_1  10
