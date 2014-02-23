@@ -121,7 +121,7 @@ void loop()
   delay(10);
   check_power_save();
   
-  #if 0
+  #if 1
   #ifdef USE_SERIAL
   if(count == 0)
   {
