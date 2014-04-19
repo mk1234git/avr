@@ -57,6 +57,7 @@ void lcdPrint(char c)
     esc = 1;
   else if(esc == 1)
   {
+    // based on VT52 codes
     if(c == 'A')
     {
       if(row > 0)
@@ -124,7 +125,13 @@ void lcdPrint(char c)
     lcd.setCursor(col, row);
   }
   else
-    lcd.write(c);
+  {
+    if(col < 20)
+    {
+      col++;
+      lcd.write(c);
+    }
+  }
 }
 
 void loop() {
